@@ -198,6 +198,23 @@ const UniIcon = styled.div`
   }
 `
 
+const ForkInfo = styled.div`
+  position: absolute;
+  width: 206px;
+  left: calc(50% - 103px);
+  color: #8e9eb2;
+
+  @media (max-width: 960px) {
+    position: fixed;
+    bottom: 16px;
+    z-index: 100;
+  }
+
+  @media (max-width: 734px) {
+    bottom: 75px;
+  }
+`
+
 const activeClassName = 'ACTIVE'
 
 const StyledNavLink = styled(NavLink).attrs({
@@ -356,6 +373,7 @@ export default function Header() {
           </StyledExternalLink>
         </HeaderLinks>
       </HeaderRow>
+      <ForkInfo>Uniswap frontend fork that works with Uniswap pools.</ForkInfo>
       <HeaderControls>
         <HeaderElement>
           <HideSmall>
